@@ -27,3 +27,9 @@ input[type='text'] {
 	font-size: 1em !important;
 	padding: 0 .25em;
 }
+
+.chosenWord {
+	display: inline-block;
+	text-align: center;
+	font-weight: 400;
+}
