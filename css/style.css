@@ -11,12 +11,24 @@ header img {
 	width: 40%;
 }
 
+section {
+	//border-bottom: 1px dotted #CCC;
+	padding: 4em 0;
+}
+
 section h2 {
 	font-size: 2.25em;
 }
 
+section p {
+	padding: 0;
+}
+
 input[type='text'] {
-	font-size: 1.75em;
+	text-align: center;
+	font-size: 1.65em;
+	width: 85%;
+	margin-bottom: 1.25em;
 }
 
 .blankSpace {
@@ -32,4 +44,8 @@ input[type='text'] {
 	display: inline-block;
 	text-align: center;
 	font-weight: 400;
+}
+
+footer p {
+	padding: 3em 0 3em 0;
 }
