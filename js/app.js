@@ -1,19 +1,23 @@
 angular.module('madlibApp', ['ngMessages'])
 	.controller('madlibCtrl', function($scope){
-		
-		$scope.name = '';
-		$scope.jobTitle = '';
-		$scope.tediousTask = '';
-		$scope.dirtyTask = '';
-		$scope.celebrity = '';
-		$scope.uselessSkill = '';
-		$scope.adjective = '';
-		$scope.obnoxious = '';
-		$scope.hugeNumber = '';
 
-		$scope.genderIs = 'he';
-		$scope.genderOwner = 'him';
-		$scope.genderOwner2 = 'his';
+		$scope.clearFields = function(){
+			$scope.name = '';
+			$scope.jobTitle = '';
+			$scope.tediousTask = '';
+			$scope.dirtyTask = '';
+			$scope.celebrity = '';
+			$scope.uselessSkill = '';
+			$scope.adjective = '';
+			$scope.obnoxious = '';
+			$scope.hugeNumber = '';
+
+			$scope.genderIs = 'he';
+			$scope.genderOwner = 'him';
+			$scope.genderOwner2 = 'his';
+		};
+		
+		$scope.clearFields();
 
 		$scope.checkGender = function(gender){
 			gender = $scope.gender;
@@ -32,39 +36,11 @@ angular.module('madlibApp', ['ngMessages'])
 			return !word ? 'blankSpace':'';
 		}
 
-		$scope.clearFields = function(){
-			$scope.name = '';
-			$scope.jobTitle = '';
-			$scope.tediousTask = '';
-			$scope.dirtyTask = '';
-			$scope.celebrity = '';
-			$scope.uselessSkill = '';
-			$scope.adjective = '';
-			$scope.obnoxious = '';
-			$scope.hugeNumber = '';
-
-			$scope.genderIs = 'he';
-			$scope.genderOwner = 'him';
-			$scope.genderOwner2 = 'his';
-		};
-
 		$scope.startOver = function(){
 			$scope.formIsValid = false;
 			$scope.madlibForm.$submitted = null;
 			
-			$scope.name = '';
-			$scope.jobTitle = '';
-			$scope.tediousTask = '';
-			$scope.dirtyTask = '';
-			$scope.celebrity = '';
-			$scope.uselessSkill = '';
-			$scope.adjective = '';
-			$scope.obnoxious = '';
-			$scope.hugeNumber = '';
-
-			$scope.genderIs = 'he';
-			$scope.genderOwner = 'him';
-			$scope.genderOwner2 = 'his';
+			$scope.clearFields();
 		};
 
 		$scope.formIsValid = false;
