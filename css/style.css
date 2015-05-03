@@ -13,7 +13,7 @@ header img {
 
 section {
 	//border-bottom: 1px dotted #CCC;
-	padding: 4em 0;
+	padding: 1em 0 3em 0;
 }
 
 section h2 {
@@ -48,4 +48,13 @@ input[type='text'] {
 
 footer p {
 	padding: 3em 0 3em 0;
+}
+
+.errorTxt {
+	font-weight: bold;
+	color: tomato;
+}
+
+input.error {
+	background-color: tomato;
 }

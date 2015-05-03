@@ -1,4 +1,4 @@
-angular.module('madlibApp', [])
+angular.module('madlibApp', ['ngMessages'])
 	.controller('madlibCtrl', function($scope){
 		
 		$scope.name = '';
@@ -48,7 +48,34 @@ angular.module('madlibApp', [])
 			$scope.genderOwner2 = 'his';
 		};
 
-		$scope.submitMadlib = function(){
+		$scope.startOver = function(){
+			$scope.formIsValid = false;
+			$scope.madlibForm.$submitted = null;
+			
+			$scope.name = '';
+			$scope.jobTitle = '';
+			$scope.tediousTask = '';
+			$scope.dirtyTask = '';
+			$scope.celebrity = '';
+			$scope.uselessSkill = '';
+			$scope.adjective = '';
+			$scope.obnoxious = '';
+			$scope.hugeNumber = '';
 
+			$scope.genderIs = 'he';
+			$scope.genderOwner = 'him';
+			$scope.genderOwner2 = 'his';
+		};
+
+		$scope.formIsValid = false;
+		$scope.submitted = false;
+
+		$scope.submitMadlib = function(){
+			$scope.submitted = true;
+			if($scope.madlibForm.$valid){
+				$scope.formIsValid = true;
+			} else {
+				$scope.formIsValid = false;
+			}
 		}
 	});
