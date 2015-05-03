@@ -47,4 +47,8 @@ angular.module('madlibApp', [])
 			$scope.genderOwner = 'him';
 			$scope.genderOwner2 = 'his';
 		};
+
+		$scope.submitMadlib = function(){
+
+		}
 	});

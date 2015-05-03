@@ -35,44 +35,47 @@
 						<h2>Provide the following words:</h2>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col s4 center-align">
-						<input type="text" ng-model="name" placeholder="Name">
-						<input type="text" ng-model="jobTitle" placeholder="Job Title">
-						<input type="text" ng-model="tediousTask" placeholder="Tedious Task">
-					</div>
+				<form name="madlibForm" ng-submit="submitMadlib()">
+					<div class="row">
+						<div class="col s4 center-align">
+							<input type="text" ng-model="name" placeholder="Name">
+							<input type="text" ng-model="jobTitle" placeholder="Job Title">
+							<input type="text" ng-model="tediousTask" placeholder="Tedious Task">
+						</div>
 
-					<div class="col s4 center-align">
-						<input type="text" ng-model="dirtyTask" placeholder="Dirty Task">
-						<input type="text" ng-model="celebrity" placeholder="Celebrity">
-						<input type="text" ng-model="uselessSkill" placeholder="Useless Skill">
-					</div>
+						<div class="col s4 center-align">
+							<input type="text" ng-model="dirtyTask" placeholder="Dirty Task">
+							<input type="text" ng-model="celebrity" placeholder="Celebrity">
+							<input type="text" ng-model="uselessSkill" placeholder="Useless Skill">
+						</div>
 
-					<div class="col s4 center-align">
-						<input type="text" ng-model="adjective" placeholder="Adjective">
-						<input type="text" ng-model="obnoxious" placeholder="Obnoxious">
-						<input type="text" ng-model="hugeNumber" placeholder="Huge Number">
+						<div class="col s4 center-align">
+							<input type="text" ng-model="adjective" placeholder="Adjective">
+							<input type="text" ng-model="obnoxious" placeholder="Obnoxious">
+							<input type="text" ng-model="hugeNumber" placeholder="Huge Number">
+						</div>
+					</div>	
+					<div class="row">
+						<div class="col s6 left-align">
+							<p>
+								<span class="switch">
+									<label>
+										Male
+										<input type="checkbox" ng-model="gender" ng-click="checkGender()">
+										<span class="lever"></span>
+										Female
+									</label>
+								</span>
+							</p>
+						</div>
+						<div class="col s6 right-align">
+							
+								<a class="btn-large red lighten-2" ng-click="clearFields()">Clear All</a>
+								<button type="submit" class="btn-large cyan lighten-2">Submit</button>
+							
+						</div>
 					</div>
-				</div>	
-				<div class="row">
-					<div class="col s6 left-align">
-						<p>
-							<span class="switch">
-								<label>
-									Male
-									<input type="checkbox" ng-model="gender" ng-click="checkGender()">
-									<span class="lever"></span>
-									Female
-								</label>
-							</span>
-						</p>
-					</div>
-					<div class="col s6 right-align">
-						<p>
-							<a class="btn-large red lighten-2" ng-click="clearFields()">Clear All</a>
-						</p>
-					</div>
-				</div>		
+				</form>		
 			</section>
 		</div>
 
