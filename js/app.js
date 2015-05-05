@@ -1,4 +1,4 @@
-angular.module('madlibApp', ['ngMessages'])
+angular.module('madlibApp', ['ngMessages', 'ngAnimate'])
 	.controller('madlibCtrl', function($scope){
 
 		$scope.clearFields = function(){
